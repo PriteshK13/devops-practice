@@ -41,7 +41,7 @@ ingrerss {
     cidr_block = ["0.0.0.0/0"]
 }
 
-engress {
+egress {
     from_port = 0
     to_port = 0
     protocol = "-1"
