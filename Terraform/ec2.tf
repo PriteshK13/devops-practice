@@ -22,7 +22,7 @@ user_data = <<-EOF
 
               EOF
 
-resource "aws_security_group" "sg_webserver"
+resource "aws_security_group" "sg_webserver" {
 
     ingress {
     description ="Allow http"
@@ -47,6 +47,7 @@ engress {
     protocol = "-1"
     cidr_block = ["0.0.0.0/0"]
 
+ }
 }
 
 
