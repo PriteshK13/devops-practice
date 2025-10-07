@@ -10,3 +10,21 @@ resource "aws_instance" "webserver" {
    vpc_security_group_ids = ["sg-0d186509748b7a67d"]
 }
 
+
+resourse "aws_security_group" "sg-webserver" {
+    ingress {
+        description = "Allow HTTP"
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
+
+    }
+}
+
